@@ -1,0 +1,6 @@
+.idea/
+venv2
+venv
+__pycache__
+output.wav
+*.pyc
