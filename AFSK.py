@@ -76,7 +76,7 @@ class AFSK:
     def filterAFSK(self, audio_input):
         differential = numpy.diff(audio_input, 1)
         frequency_domain = numpy.abs(signaltools.hilbert(differential))
-        pir_filter = signal.firwin(numtaps=2, cutoff=1800, fs=self.SAMPLE_RATE)
+        pir_filter = signal.firwin(numtaps=2, cutoff=1800, nyq=self.SAMPLE_RATE/2)
 
         return signal.filtfilt(pir_filter, [1.0], frequency_domain)
 

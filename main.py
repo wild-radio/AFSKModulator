@@ -45,8 +45,8 @@ if (sys.argv[1] == "modulate"):
         with open ("temp_wav.wav", "wb") as out:
             audiogen.sampler.write_wav(out, modulated_audio)
         
+	play()
         GPIO.output(0o10, False)
-        play()
         exit(0)
 #
 # with open (sys.argv[2], "rb") as f:
