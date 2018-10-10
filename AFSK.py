@@ -27,7 +27,7 @@ class AFSK:
                 self.modulate(data),
                 audiogen.silence(0.15),
         ):
-            yield sample
+            yield sample * 0.5
 
     def modulate(self, data):
         seconds_per_sample = 1.0 / self.SAMPLE_RATE
