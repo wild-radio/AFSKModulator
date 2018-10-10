@@ -45,7 +45,7 @@ class AudioRecorder:
                                   channels=CHANNELS,
                                   rate=RATE,
                                   input=True,
-                                  output=True,
+                                  output=False,
                                   frames_per_buffer=chunk)
 
     def record(self, data):
